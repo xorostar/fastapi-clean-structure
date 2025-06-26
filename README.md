@@ -19,19 +19,28 @@ I'm open to hearing your feedback about the template and what you'd like to see 
 --
 
 # Install all dependencies.
+
 - Run `pip install -r requirements-dev.txt`
 
 # How to run app. Using Docker with PostgreSQL.
+
 - Install Docker Desktop
 - Run `docker compose up --build`
 - Run `docker compose down` to stop all services
 
 # How to run locally without postgres or docker.
+
 - in database/core.py change the DATABASE_URL to sqlite
 - run `uvicorn src.main:app --reload`
 
 # How to run tests.
+
 - Run `pytest` to run all tests
 
+# Other development commands.
+
+- fastapi dev ./src/main.py
+- Create a migration: `alembic revision -m "create todos table"`
+- Run the migrations: `alembic upgrade head`
 
 Cheers!
