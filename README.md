@@ -42,5 +42,7 @@ I'm open to hearing your feedback about the template and what you'd like to see 
 - fastapi dev ./src/main.py
 - Create a migration: `alembic revision -m "create todos table"`
 - Run the migrations: `alembic upgrade head`
+- Revert the recent migration: `alembic downgrade -1`
+- Revert all migrations: `alembic downgrade base`
 
 Cheers!
